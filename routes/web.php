@@ -18,4 +18,6 @@ use App\Http\Controllers\StudentController;
 Route::get('/home',function(){
     return view ('home.home');
 });
-Route::get('students',[StudentController::class,'index']);
+Route::get('/students',[StudentController::class,'index']);
+Route::post('/students/store',[StudentController::class,'store'])->name('students.store');
+
